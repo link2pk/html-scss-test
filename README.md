@@ -9,4 +9,9 @@ html scss test
 - `style.scss` and `style.css` in [css](./css) folder
 - images in [assets](./assets) folder
 
+| SCSS file     | Description          |
+| -------- | -------------- |
+| normalize.scss | for normalization across browers |
+| variables.scss | for theming |
+| custom.scss | to write custom scss  |
 
