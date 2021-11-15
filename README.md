@@ -15,3 +15,5 @@ html scss test
 | variables.scss | for theming |
 | custom.scss | to write custom scss  |
 
+## Live Preview
+https://link2pk.github.io/html-scss-test/
