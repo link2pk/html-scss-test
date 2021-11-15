@@ -1,0 +1,298 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+footer,
+header,
+main,
+section {
+  display: block;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+:root {
+  --body-color: #fff;
+  --primary-pink: #F27999;
+  --secondary-pink: #FFB7BA;
+  --primary-blue: #83A3DB;
+  --primary-btn-hover: #ef6187;
+  --secondary-btn-hover: #7196d6;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: 400 18px sans-serif;
+  text-align: center;
+  color: var(--body-color);
+}
+
+h1, h2, h3 {
+  font-family: serif;
+}
+
+a,
+button {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main > section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.headings-font-size, .headings-bg, .marriage-banner h1, .marriage-info h2, .cta h3 {
+  font-size: 1.6rem;
+}
+
+.headings-bg, .marriage-banner h1, .marriage-info h2 {
+  background: url(../assets/line.png) no-repeat center bottom;
+  background-size: 178px auto;
+  padding-bottom: 15px;
+  margin: 1.5rem 0 2rem;
+}
+
+.marriage-banner {
+  background: var(--primary-blue) url(../assets/flower-5.png) no-repeat bottom right/180px auto;
+}
+
+.marriage-banner .container {
+  padding-top: 1px;
+  padding-bottom: 146px;
+}
+
+.banner img {
+  height: 263px;
+  width: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 2.5px;
+}
+
+.caption {
+  margin: 2px auto 0;
+}
+
+.caption a {
+  color: var(--body-color);
+  font-size: 11px;
+}
+
+.caption a:hover {
+  text-decoration: underline;
+}
+
+.marriage-info {
+  background-color: var(--secondary-pink);
+}
+
+.marriage-info p {
+  max-width: 462px;
+  margin: 2.4rem auto;
+  line-height: 1.6;
+}
+
+.marriage-info .container {
+  padding: 60px 0 117px;
+  position: relative;
+}
+
+.marriage-info-bg {
+  position: absolute;
+  top: -19px;
+  left: -36px;
+  width: 260px;
+}
+
+.cta {
+  padding: 25px 0 120px;
+  color: var(--primary-pink);
+}
+
+.cta p {
+  margin-bottom: 23px;
+}
+
+.cta-style {
+  position: relative;
+}
+
+.style-bg {
+  position: absolute;
+  left: 16px;
+  bottom: -12px;
+  width: 176px;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  line-height: 44px;
+  padding: 0 38px;
+}
+
+.btn-primary {
+  background-color: var(--primary-pink);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-btn-hover);
+}
+
+.btn-secondary {
+  background-color: var(--primary-blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-btn-hover);
+}
+
+.footer-seperator {
+  margin: 34px 0 18px;
+}
+
+.instagram-link {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.instagram-link img {
+  width: 58px;
+}
+
+@media (min-width: 400px) {
+  .banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .banner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner > div {
+    width: 50%;
+  }
+  .banner > div:nth-of-type(2n+1) {
+    text-align: right;
+  }
+  .banner > div:nth-of-type(2n) {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .marriage-banner {
+    background-image: none;
+  }
+  .marriage-banner .container {
+    background: url(../assets/flower-5.png) no-repeat bottom right/180px auto;
+  }
+  .banner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner img {
+    height: 240px;
+    width: 160px;
+  }
+  .caption {
+    width: 655px;
+    text-align: right;
+  }
+  .style-deco .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .style-deco .cta {
+    width: 50%;
+  }
+  .style-deco .cta-deco {
+    border-left: 1px solid var(--secondary-pink);
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-deco {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,233 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	font: 400 18px sans-serif;
+	text-align: center;
+	color: var(--body-color);
+	
+}
+
+h1,h2,h3{
+	font-family: serif;
+}
+a,
+button {
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+
+}
+
+a {
+	text-decoration: none;
+}
+.main{
+	> section{
+		
+		padding-left: $spacer;
+		padding-right: $spacer;
+	}
+}
+
+.clearfix::after{
+	display: block;
+    content: "";
+    clear: both;
+}
+.container{
+	max-width: 1024px; margin: 0 auto;
+}
+
+.headings-font-size{
+	font-size: 1.6rem;
+}
+
+
+.headings-bg{
+	@extend .headings-font-size;
+	background: url(../assets/line.png)  no-repeat center bottom;
+	background-size: 178px auto;
+	padding-bottom: 15px;
+	margin: 1.5rem 0 2rem;
+}
+
+.marriage-banner{
+	
+	background: var(--primary-blue) url(../assets/flower-5.png) no-repeat bottom right / 180px auto;
+	h1{
+		@extend .headings-bg;
+		
+	}
+	.container{
+		padding-top: 1px;
+		padding-bottom: 146px;
+		
+	}
+}
+.banner{
+	
+	 img{
+		height : 263px;
+		width: 175px;
+		object-fit: cover;
+		margin: 2.5px;
+	}
+}
+.caption{
+	margin: 2px auto 0;
+	a{
+		color: var(--body-color);
+		font-size: 11px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+.marriage-info{
+	background-color: var(--secondary-pink); 
+	h2{
+		@extend .headings-bg;
+	}
+	p{
+		max-width: 462px;
+		margin: 2.4rem auto;
+		line-height: 1.6;
+	}
+	.container{
+		padding: 60px 0 117px;
+		position: relative;
+	}
+}
+.marriage-info-bg{
+	position: absolute;
+	top: -19px;
+	left: -36px;
+	width: 260px;
+}
+
+.cta{
+	
+		padding: 25px 0 120px;
+	
+	color: var(--primary-pink);
+	
+	h3{
+		@extend .headings-font-size;
+	}
+	p{
+		margin-bottom: 23px;
+	}
+}
+.cta-style{
+	position: relative;
+}
+.style-bg{
+	position: absolute;
+	left: 16px;
+	bottom: -12px;
+	width: 176px;
+}
+
+
+.btn{
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600;
+	color: #fff;
+	display: inline-block;
+	line-height: 44px;
+	padding: 0 38px;
+}
+.btn-primary{
+	background-color: var(--primary-pink);
+	&:hover{
+		background-color: var(--primary-btn-hover) ;  
+	}
+}
+.btn-secondary{
+	background-color: var(--primary-blue);
+	&:hover{
+		background-color: var(--secondary-btn-hover) ;   
+	}
+}
+
+.footer-seperator{
+	margin: 34px 0 18px;
+}
+.instagram-link{
+	display: inline-block;
+	margin-bottom: 10px;
+	img{
+		width: 58px;
+	}
+}
+
+//Media queries
+@media  (min-width: 400px ) {
+	.banner{
+		display: flex; 
+		
+	}
+}
+
+@media  (min-width: 400px ) and (max-width: 767px){
+	.banner{
+		
+		flex-wrap: wrap;
+		> div{
+			width: 50%;
+			&:nth-of-type(2n+1){
+				text-align: right;
+			}
+			&:nth-of-type(2n){
+				text-align: left;
+			}
+		}
+	}
+}
+
+@media  (min-width: 768px ) {
+	.marriage-banner{
+		background-image: none;
+		.container{
+			
+			background:  url(../assets/flower-5.png) no-repeat bottom right / 180px auto;
+		}
+	}
+	.banner{
+		justify-content: center;
+		img{
+			height: 240px;
+			width: 160px;
+			
+		}
+	}
+	.caption{
+		width: 655px;
+		text-align: right;
+		
+	}
+	.style-deco{
+		 .container{
+			display: flex;
+			
+		 }
+		 .cta{
+			 width: 50%;
+		 }
+		 .cta-deco{
+			border-left: 1px solid var(--secondary-pink);
+		}
+		 
+	}
+}
+
+@media  (max-width: 767px ){
+	.cta-deco{
+		padding-top: 0;
+		padding-bottom: 60px;
+	}
+}
+
